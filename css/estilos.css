@@ -174,8 +174,60 @@ margin: o auto;
     font-weight: 300  ;
 }
 
+.tienda_grid{
+    display: grid;
+    height: 800px;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6";
+    gap: 20px;
+}
+.tienda_item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.tienda_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.tienda_link{
+    font-size: 30px;
+    color: #fff;
+}
+.tienda_hover{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.tienda_item:hover .tienda_hover{
+    transform: translateX(0%);
+}
+.tienda_icon{
+    margin-top: 10px;
+    font-size: 40px;
+    color: #fff;
+}
+
+
+
 .footer{
     background: var(--color-primmary);
+    
 }
 .navItemsf{
     color: #fff;
@@ -187,12 +239,12 @@ margin: o auto;
     
 }
 
+
 .footer__grid{
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
-    align-items: center;
-    
+    align-items: center; 
 }
 .footer__title{
     font-weight: 400;
@@ -229,3 +281,77 @@ margin: o auto;
 
 
 
+/*responsive*/
+
+@media screen and (max-width: 800px) {
+    :root{
+        --botton-padding:18px 40px;
+    }
+    .nav{
+        justify-content: space-around;
+        font-size: 0.5rem;
+    }
+    .nav__item__contac{
+        border: none;
+    }
+    .navItems{
+        font-weight: 400;
+        border-bottom: 1px solid #a87b05;
+        margin-right: 0;
+        
+    }
+  
+    .navItems--footer{
+        border: none;
+    }
+    .head__texts{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .head__title{
+        font-size: 2.5rem;
+    }
+    .head__subtitle{
+        font-size: 1.5rem;
+    }
+    /*abou*/
+    .Quienessomos__copy{
+        width: 100%;
+    }
+    .information{
+        grid-template-columns: 1fr;
+    }
+    .information.container{
+        padding-top: 25px;
+    }
+    .information__img--left{
+        text-align: center;
+    }
+    .information_text:last-child{
+        grid-row: 3/5;
+    }
+    /*tienda*/
+    .tienda_grid{
+        grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 img6";
+        height: 600px;
+    }
+    /* footer*/
+    .footer__grid{
+        grid-template-columns: 1fr;
+       
+    }
+    .footer_cnt{
+        grid-row: 1/2 ;
+    }
+    .footer__title{
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .navItemsf{
+    font-size: 1rem;
+    padding: 0%;
+    }
+}
