@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+:root{
+    --background:linear-gradient(135deg, #667eea7e 0%,#764ba2298 100%);
+    --color-primmary: #a87b05;
+    --color-secundary: #764ba2;
+    --botton-pading: 20px 40px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+
+}
+.subtitle{
+    color: var(--color-primmary);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+
+}
+.head{
+    height: 100vh;
+    /*background-color: black;*/
+    background-image: url(../imagenes/mo-idris-h0WUDqlPlVQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.head .container{
+    padding: 1px;
+}
+.head2{
+    display:flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+.head2.container{
+    padding: 1px;
+}
+
+.nav{
+    display:flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+.navItems{
+    color: #a87b05;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+
+.nav__item__contac{
+    border : 1px solid var(--color-primmary);
+   
+
+}
+.navItems--footer{
+    padding: 10px ;
+
+}
+.head__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: #a87b05;
+}
+.head__texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.head__title{
+    font-size: 3.2rem;
+}
+.head__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+.head__contac{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primmary);
+    padding: var(--botton-pading);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+}
+.head__wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+}
+.Quienessomos {
+    padding-top: 0;
+    text-align: center;
+
+}
+.Quienessomosbotton {
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Quienessomos__picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+
+}
+.Quienessomos__copy{
+width: 80%;
+margin: o auto;
+
+}
+.quienesassomos__contac{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primmary);
+    color: #fff;
+    text-decoration: none;
+    padding: var(--botton-pading);
+    border-radius: 40px;
+}
+.information{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+
+}
+.information__img{
+    text-align: center;
+
+}
+.information__img--left{
+    text-align: left;
+    text-align: center;
+
+} 
+.informacion__pct{
+     max-width: 80%;
+}
+.information__parag{
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300  ;
+}
+
+.footer{
+    background: var(--color-primmary);
+}
+.navItemsf{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 15px 20px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    
+}
+
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+    
+}
+.footer__title{
+    font-weight: 400;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+   align-items: center;
+}
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.footer__icon{
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    
+    
+}
+.fa-brands.footer__icon{
+    line-height: 60px;
+    
+}
+
+
