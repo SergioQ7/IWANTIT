@@ -1,0 +1,60 @@
+$colorletra: #a87b05;
+$colorfooter: #fff;
+$colorprimmary: #a87b05;
+$padding: 20px 40px;
+.head{
+    height: 100vh;
+    background-image: url(../imagenes/mo-idris-h0WUDqlPlVQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+
+   
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 80px 0;
+        max-width: 1200px;
+        padding: 1px;
+    
+    }
+    
+
+    .head__container{
+        display: flex;
+        height: calc(100vh - 70px);
+        align-items: center;
+        color: $colorletra;
+    }
+    .head__texts{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .head__title{
+        font-size: 3.2rem;
+    }
+    .head__subtitle{
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 15px 0;
+    }
+    .head__contac{
+        display: inline-block;
+        margin-top: 30px;
+        background: $colorprimmary;
+        padding: $padding;
+        color: $colorfooter;
+        text-decoration: none;
+        border-radius: 40px;
+    }
+    .head__wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+    }
+}

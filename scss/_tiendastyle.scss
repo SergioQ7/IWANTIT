@@ -1,0 +1,55 @@
+//variables
+$colorletra: #a87b05;
+$colorfooter: #fff;
+$colorprimmary: #a87b05;
+$padding: 20px 40px;
+.tienda{
+    .tienda_grid{
+        display: grid;
+        height: 800px;
+        grid-template-areas: 
+        "img1 img2 img3"
+        "img4 img5 img6";
+        gap: 20px;
+    }
+    .tienda_item{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .tienda_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    .tienda_link{
+        font-size: 30px;
+        color: $colorfooter;
+    }
+    .tienda_hover{
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: $colorfooter;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+    .tienda_item:hover .tienda_hover{
+        transform: translateX(0%);
+    }
+    .tienda_icon{
+        margin-top: 10px;
+        font-size: 40px;
+        color: $colorfooter;
+    }
+}

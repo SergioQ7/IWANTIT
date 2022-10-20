@@ -1,12 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
-:root {
-  --background:linear-gradient(135deg, #667eea7e 0%,#764ba2298 100%);
-  --color-primmary: #a87b05;
-  --color-secundary: #764ba2;
-  --botton-pading: 20px 40px;
+.tienda .tienda_grid {
+  display: grid;
+  height: 800px;
+  grid-template-areas: "img1 img2 img3" "img4 img5 img6";
+  gap: 20px;
+}
+.tienda .tienda_item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tienda .tienda_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.tienda .tienda_link {
+  font-size: 30px;
+  color: #fff;
+}
+.tienda .tienda_hover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(100%);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.tienda .tienda_item:hover .tienda_hover {
+  transform: translateX(0%);
+}
+.tienda .tienda_icon {
+  margin-top: 10px;
+  font-size: 40px;
+  color: #fff;
 }
 
-body {
+.head {
+  height: 100vh;
+  background-image: url(../imagenes/mo-idris-h0WUDqlPlVQ-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+.head .container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 80px 0;
+  max-width: 1200px;
+  padding: 1px;
+}
+.head .head__container {
+  display: flex;
+  height: calc(100vh - 70px);
+  align-items: center;
+  color: #a87b05;
+}
+.head .head__texts {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.head .head__title {
+  font-size: 3.2rem;
+}
+.head .head__subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 15px 0;
+}
+.head .head__contac {
+  display: inline-block;
+  margin-top: 30px;
+  background: #a87b05;
+  padding: 20px 40px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.head .head__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.body {
   font-family: "Raleway", sans-serif;
 }
 
@@ -19,24 +111,15 @@ body {
 }
 
 .subtitle {
-  color: var(--color-primmary);
+  color: #a87b05;
   font-size: 2.5rem;
   margin-bottom: 35px;
 }
 
-.head {
-  height: 100vh;
-  /*background-color: black;*/
-  background-image: url(../imagenes/mo-idris-h0WUDqlPlVQ-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  position: relative;
-}
-
-.head .container {
-  padding: 1px;
+.title {
+  color: #a87b05;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .head2 {
@@ -46,8 +129,7 @@ body {
   align-items: center;
   font-weight: 700;
 }
-
-.head2.container {
+.head2 container {
   padding: 1px;
 }
 
@@ -58,80 +140,42 @@ body {
   align-items: center;
   font-weight: 700;
 }
-
-.nav--footer {
+.nav .nav--footer {
   font-weight: 300;
   justify-content: flex-start;
 }
-
-.navItems {
+.nav .navItems {
   color: #a87b05;
   text-decoration: none;
   margin-right: 20px;
   padding: 10px 15px;
   font-weight: inherit;
 }
-
-.nav__item__contac {
-  border: 1px solid var(--color-primmary);
-}
-
-.navItems--footer {
-  padding: 10px;
-}
-
-.head__container {
-  display: flex;
-  height: calc(100vh - 70px);
-  align-items: center;
-  color: #a87b05;
-}
-
-.head__texts {
-  width: 80%;
-  margin-bottom: 50px;
-}
-
-.head__title {
-  font-size: 3.2rem;
-}
-
-.head__subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  margin: 15px 0;
-}
-
-.head__contac {
-  display: inline-block;
-  margin-top: 30px;
-  background: var(--color-primmary);
-  padding: var(--botton-pading);
+.nav .navItemsf {
   color: #fff;
   text-decoration: none;
-  border-radius: 40px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-weight: inherit;
+  font-size: 20px;
 }
-
-.head__wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
+.nav .nav__item__contac {
+  border: 1px solid var(#a87b05);
+}
+.nav .navItems--footer {
+  padding: 10px;
 }
 
 .Quienessomos {
   padding-top: 0;
   text-align: center;
 }
-
-.Quienessomosbotton {
+.Quienessomos .Quienessomosbotton {
   padding-top: 0;
   text-align: center;
   margin-bottom: 50px;
 }
-
-.Quienessomos__picture {
+.Quienessomos .Quienessomos__picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -139,20 +183,18 @@ body {
   object-fit: cover;
   object-position: top;
 }
-
-.Quienessomos__copy {
+.Quienessomos .Quienessomos__copy {
   width: 80%;
   margin: o auto;
 }
-
-.quienesassomos__contac {
+.Quienessomos .quienessomos__contac {
   display: inline-block;
-  margin-top: 30px;
-  background: var(--color-primmary);
+  background: #a87b05;
   color: #fff;
   text-decoration: none;
-  padding: var(--botton-pading);
+  padding: 20px 40px;
   border-radius: 40px;
+  margin: 50px;
 }
 
 .information {
@@ -163,61 +205,43 @@ body {
   justify-items: center;
   align-items: center;
 }
-
-.information__img {
+.information .information__img {
   text-align: center;
 }
-
-.information__img--left {
+.information .information__img--left {
   text-align: left;
   text-align: center;
 }
-
-.informacion__pct {
+.information .informacion__pct {
   max-width: 80%;
 }
-
-.information__parag {
+.information .information__parag {
   margin-bottom: 20px;
   line-height: 1.5;
   font-weight: 300;
 }
 
 .footer {
-  background: var(--color-primmary);
+  background: #a87b05;
 }
-
-.navItemsf {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 15px 20px;
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-
-.footer__grid {
+.footer .footer__grid {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 20px;
   align-items: center;
 }
-
-.footer__title {
+.footer .footer__title {
   font-weight: 400;
   color: #fff;
   font-size: 2rem;
   margin-bottom: 30px;
   text-align: center;
 }
-
-.footer__icons {
+.footer .footer___icons {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
-
-.footer__container-icons {
+.footer .footer__container-icons {
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -226,15 +250,76 @@ body {
   border: 1px solid #fff;
   border-radius: 50%;
 }
-
-.footer__icon {
+.footer .footer__icon {
   color: inherit;
-  font-size: 30px;
+  font-size: 45px;
   text-decoration: none;
 }
-
-.fa-brands.footer__icon {
+.footer .fa-brands.footer__icon {
   line-height: 60px;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --botton-padding:18px 40px;
+  }
+  .nav {
+    justify-content: space-around;
+    font-size: 0.5rem;
+  }
+  .nav__item__contac {
+    border: none;
+  }
+  .navItems {
+    font-weight: 400;
+    border-bottom: 1px solid #a87b05;
+    margin-right: 0px;
+  }
+  .navItemsf {
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+  }
+  .navItems--footer {
+    border: none;
+  }
+  .head__texts {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .head__title {
+    font-size: 2.5rem;
+  }
+  .head__subtitle {
+    font-size: 1.5rem;
+  }
+  /*abou*/
+  .Quienessomos__copy {
+    width: 100%;
+  }
+  .information {
+    grid-template-columns: 1fr;
+  }
+  .information.container {
+    padding-top: 25px;
+  }
+  .information__img--left {
+    text-align: center;
+  }
+  .information_text:last-child {
+    grid-row: 3/5;
+  }
+  /*tienda*/
+  .tienda_grid {
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+    height: 600px;
+  }
+  /* footer*/
+  .footer__grid {
+    grid-template-columns: none;
+  }
+  .footer_cnt {
+    grid-row: 1/2;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
